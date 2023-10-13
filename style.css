@@ -1,0 +1,156 @@
+:root{
+    --bg-color:'yellow';
+    --width:'0px';
+    --rotate:'0px';
+    --display:'block';
+    --distance:"0px"
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: aqua;
+}
+
+.game-over{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(57, 56, 56, 0.763);
+    
+    z-index: 100;
+    display: none;
+}
+
+.text{
+    display: block;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-60%);
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: white;
+}
+
+.text2{
+    display: block;
+    position: absolute;
+    top: 2%;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 1.5rem;
+    font-weight: 900;
+    color:#333
+}
+
+.chances{
+    color: brown;
+    font-weight: 900;
+    font-size: 1.8rem;
+}
+
+.game{
+    border: 3px solid black;
+    position: absolute;
+    width: 70%;
+    height: 20vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 0 0 5px #333;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.arrow{
+    background-color: red;
+    width: 20px;
+    height: 20px;
+    border-radius:100px ;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    box-shadow: 0 0 5px #333;
+}
+
+.arrow2{
+    display: none;
+    background-color:#333;
+    /* animation: updown 2s ease infinite forwards; */
+    width: 20px;
+    height: 20px;
+    border-radius:100px ;
+    position: absolute;
+    top: 30%;
+    box-shadow: 0 0 5px #333;
+}
+
+.arrow::after{
+    content: "";
+position: absolute;
+width:var(--width);
+border: 2px dotted var(--bg-color);
+top: 50%;
+transform: translateY(-50%);
+right: 78%;
+display: var(--display);
+
+}
+
+
+#points{
+    background-color: red;
+    position: absolute;
+    top: 40%;
+    left: 25%;
+
+
+}
+
+#fire{
+    position: absolute;
+    top: 50%;
+    left: 28%;
+    padding: .2rem 1rem;
+    font-weight: 700;
+    background-color: rgb(249, 106, 18);
+    color:white;
+    border: none;
+border-radius: 10px;
+box-shadow: 0 0 5px #333;
+}
+
+
+.move{
+    transform: translateX(var(--distance));
+    transition: .3s all ease;
+    
+}
+
+
+
+/* @keyframes updown{
+    0%{
+        top: 15%;
+    }
+
+    50%{
+        top: 30%;
+    }
+
+    80%{
+        top: 45%;
+    }
+
+    100%{
+        top: 15%;
+    }
+}
+ */
+
+
+
+
